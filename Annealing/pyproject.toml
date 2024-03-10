@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "mcmcpsp"
+version = "0.1.0"
+description = ""
+authors = [
+    "Alexander Lankheit <a.lankheit@campus.lmu.de>"
+]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+pandas = "1.4.2"
+numpy = "1.22.4"
+seaborn = "0.11.2"
+uqo = "0.0.2.5"
+dwave-qbsolv = "0.3.4"
+dwave-neal = "0.5.9"
+dimod = "0.10.16"
+pyqubo = "1.2.0"
+minorminer = "0.2.6"
+joblib = "^1.1.0"
+dwave-system = "1.10.0"
+tikzplotlib = "^0.10.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+hypothesis = "^6.46.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

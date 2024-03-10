@@ -1,0 +1,68 @@
+@startgantt
+Project starts 2022-05-19
+
+[Entwurf] starts 2022-05-19
+[Entwurf] ends 2022-05-25
+
+[Einfache Testdaten] as [Test] starts at [Entwurf]'s end
+[Test] ends at 2022-06-03
+
+[Spezielle Testdaten] starts at [Einfache Testdaten]'s end
+[Spezielle Testdaten] ends at 2022-06-10
+
+[Zufallslösungen] as [Zufall] starts at [Entwurf]'s end
+[Zufallslösungen] as [Zufall] ends 2022-05-30
+
+[Datenspeicherung] starts at 2022-05-30
+[Datenspeicherung] ends at 2022-06-03
+
+[Einfache Evaluation] starts at [Entwurf]'s end
+[Einfache Evaluation] ends 2022-05-30
+
+[Programmablauf] happens at [Test]'s end
+[Programmablauf] happens at [Zufall]'s end
+[Programmablauf] happens at [Einfache Evaluation]'s end
+[Programmablauf] happens at [Datenspeicherung]'s end
+
+[Datenerstellungsprogramm] starts 2022-05-30
+[Datenerstellungsprogramm] ends 2022-06-10
+
+[Optimierungsprogramm] starts 2022-05-30
+[Optimierungsprogramm] ends 2022-06-10
+
+
+[QUBO-Konzeption] starts 2022-05-30
+[QUBO-Konzeption] ends 2022-06-10
+
+[QUBO-Implementierung] starts at [Programmablauf]'s end
+[QUBO-Implementierung] starts at [QUBO-Konzeption]'s end
+[QUBO-Implementierung] ends 2022-06-16
+
+[Referenzimplementierungen] starts at [Programmablauf]'s end
+[Referenzimplementierungen] ends 2022-06-16
+
+[Evaluationsmaße] starts at [Entwurf]'s end
+[Evaluationsmaße] starts 2022-06-03
+[Evaluationsmaße] ends 2022-06-09
+
+[Evaluationsprogramm] starts at [Einfache Evaluation]'s end
+[Evaluationsprogramm] starts at [Evaluationsmaße]'s end
+[Evaluationsprogramm] ends 2022-06-16
+
+''[Fertiges Programm] happens at []'s end
+[Fertiges Programm] happens at [QUBO-Implementierung]'s end
+[Fertiges Programm] happens at [Referenzimplementierungen]'s end
+[Fertiges Programm] happens at [Evaluationsprogramm]'s end
+
+[Evaluation] starts at [Spezielle Testdaten]'s end
+[Evaluation] starts at [QUBO-Implementierung]'s end
+[Evaluation] starts at [Referenzimplementierungen]'s end
+[Evaluation] starts at [Evaluationsprogramm]'s end
+[Evaluation] ends 2022-06-23
+
+[Ausarbeitung] starts at [Evaluation]'s end
+
+[Präsentation] happens at 2022-07-19
+[Schriftliche Abgabe] happens at 2022-07-23
+[Ausarbeitung] ends at [Schriftliche Abgabe]'s start
+@endgantt

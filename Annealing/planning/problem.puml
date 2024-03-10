@@ -1,0 +1,78 @@
+@startuml
+class Problem<Col, Con> {
+    colors : Set<Col>
+    configurations : Set<Con>
+    number_of_configuration_color_combinations: Dict<(Con, Col), int>
+    carLine : List<Con>
+}
+
+class Solution<Col, Con> {
+    problem : Problem<Col, Con>
+    assignments : List<Col>
+    algorithm : String
+    gathered_data : Dict<String, Any>
+}
+
+interface ProblemInstanceCreation<Col, Con> {
+    Problem<Col, Con> createInstance()
+}
+ProblemInstanceCreation --> Problem
+
+class IntegerProblemInstanceCreation {
+    numberOfColors: int
+    numberOfConfigurations: int
+    carLineLength: int
+
+    Problem<int, int> createInstance()
+}
+
+IntegerProblemInstanceCreation --|> ProblemInstanceCreation
+
+interface Solver<Col, Con> {
+     Solution<Col, Con> solve(problem: Problem<Col, Con>)
+}
+
+Solver --> Problem
+Solver --> Solution
+
+class RandomSolver<Col, Con>
+RandomSolver --|> Solver
+
+abstract TrackingSolver<Col, Con> {
+    # internal : Solver
+}
+
+TrackingSolver --|> Solver
+TrackingSolver --o Solver
+
+class RuntimeTrackingSolver<Col, Con>
+RuntimeTrackingSolver --|> TrackingSolver
+
+class ColorChangeTrackingSolver<Col, Con> {
+    int numberOfColorChanges()
+}
+ColorChangeTrackingSolver --|> TrackingSolver
+
+interface Sampler {
+    dimod.SampleSet sample(model: dimod.BinaryQuadraticModel)
+}
+
+class QuantumAnnealingSolver<Col, Con> {
+    # internal : Sampler
+
+    ' # dimod.BinaryQuadraticModel encode(problem: Problem<Col, Con>)
+    ' # Solution<Col, Con> decode(problem: dimod.SampleSet)
+}
+
+QuantumAnnealingSolver --|> Solver
+Sampler --o QuantumAnnealingSolver
+
+DWaveSampler --|> Sampler
+FujitsuSampler --|> Sampler
+
+interface Evaluation<Col, Con> {
+    void evaluate(solutions: List<Solution<Col, Con>>)
+}
+Evaluation --> Solution
+
+@enduml

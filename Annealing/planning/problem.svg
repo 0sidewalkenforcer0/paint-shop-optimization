@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="656px" preserveAspectRatio="none" style="width:1240px;height:656px;background:#FFFFFF;" version="1.1" viewBox="0 0 1240 656" width="1240px" zoomAndPan="magnify"><defs/><g><!--MD5=[08770b5ff02271603200ffd0f930842d]
+class Problem--><g id="elem_Problem"><rect codeLine="1" fill="#F1F1F1" height="113.1875" id="Problem" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="477" x="136" y="536"/><ellipse cx="314.25" cy="552" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M317.2188,557.6406 Q316.6406,557.9375 316,558.0781 Q315.3594,558.2344 314.6563,558.2344 Q312.1563,558.2344 310.8281,556.5938 Q309.5156,554.9375 309.5156,551.8125 Q309.5156,548.6875 310.8281,547.0313 Q312.1563,545.375 314.6563,545.375 Q315.3594,545.375 316,545.5313 Q316.6563,545.6875 317.2188,545.9844 L317.2188,548.7031 Q316.5938,548.125 316,547.8594 Q315.4063,547.5781 314.7813,547.5781 Q313.4375,547.5781 312.75,548.6563 Q312.0625,549.7188 312.0625,551.8125 Q312.0625,553.9063 312.75,554.9844 Q313.4375,556.0469 314.7813,556.0469 Q315.4063,556.0469 316,555.7813 Q316.5938,555.5 317.2188,554.9219 L317.2188,557.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="334.75" y="556.8467">Problem</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="563" y="533"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="564" y="545.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="612" y1="568" y2="568"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="142" y="584.9951">colors : Set&lt;Col&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="142" y="601.292">configurations : Set&lt;Con&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="142" y="617.5889">carLine : List&lt;Con&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="137" x2="612" y1="624.8906" y2="624.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="465" x="142" y="641.8857">number_of_configuration_color_combinations: Dict&lt;(Con, Col), int&gt;</text></g><!--MD5=[14dcd1c6f0ba10ad7a0e543e42252a17]
+class Solution--><g id="elem_Solution"><rect codeLine="8" fill="#F1F1F1" height="113.1875" id="Solution" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="249" x="779" y="536"/><ellipse cx="843.75" cy="552" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M846.7188,557.6406 Q846.1406,557.9375 845.5,558.0781 Q844.8594,558.2344 844.1563,558.2344 Q841.6563,558.2344 840.3281,556.5938 Q839.0156,554.9375 839.0156,551.8125 Q839.0156,548.6875 840.3281,547.0313 Q841.6563,545.375 844.1563,545.375 Q844.8594,545.375 845.5,545.5313 Q846.1563,545.6875 846.7188,545.9844 L846.7188,548.7031 Q846.0938,548.125 845.5,547.8594 Q844.9063,547.5781 844.2813,547.5781 Q842.9375,547.5781 842.25,548.6563 Q841.5625,549.7188 841.5625,551.8125 Q841.5625,553.9063 842.25,554.9844 Q842.9375,556.0469 844.2813,556.0469 Q844.9063,556.0469 845.5,555.7813 Q846.0938,555.5 846.7188,554.9219 L846.7188,557.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="864.25" y="556.8467">Solution</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="978" y="533"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="979" y="545.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="780" x2="1027" y1="568" y2="568"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="209" x="785" y="584.9951">problem : Problem&lt;Col, Con&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="785" y="601.292">assignments : List&lt;Col&gt;</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="785" y="617.5889">algorithm : String</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="785" y="633.8857">gathered_data : Dict&lt;String, Any&gt;</text><line style="stroke:#181818;stroke-width:0.5;" x1="780" x2="1027" y1="641.1875" y2="641.1875"/></g><!--MD5=[b6a02c44188d79a7ee900af01dcad18c]
+class ProblemInstanceCreation--><g id="elem_ProblemInstanceCreation"><rect codeLine="15" fill="#F1F1F1" height="64.2969" id="ProblemInstanceCreation" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="268" x="54.5" y="412"/><ellipse cx="73.1" cy="428" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M69.0219,423.7656 L69.0219,421.6094 L76.4125,421.6094 L76.4125,423.7656 L73.9438,423.7656 L73.9438,431.8438 L76.4125,431.8438 L76.4125,434 L69.0219,434 L69.0219,431.8438 L71.4906,431.8438 L71.4906,423.7656 L69.0219,423.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="173" x="87.9" y="432.8467">ProblemInstanceCreation</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="272.5" y="409"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="273.5" y="421.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="55.5" x2="321.5" y1="444" y2="444"/><line style="stroke:#181818;stroke-width:0.5;" x1="55.5" x2="321.5" y1="452" y2="452"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="60.5" y="468.9951">Problem&lt;Col, Con&gt; createInstance()</text></g><!--MD5=[ff9f3164fd29a726c31bcd599d85a2f9]
+class IntegerProblemInstanceCreation--><g id="elem_IntegerProblemInstanceCreation"><rect codeLine="20" fill="#F1F1F1" height="113.1875" id="IntegerProblemInstanceCreation" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="255" x="7" y="239"/><ellipse cx="22" cy="255" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.9688,260.6406 Q24.3906,260.9375 23.75,261.0781 Q23.1094,261.2344 22.4063,261.2344 Q19.9063,261.2344 18.5781,259.5938 Q17.2656,257.9375 17.2656,254.8125 Q17.2656,251.6875 18.5781,250.0313 Q19.9063,248.375 22.4063,248.375 Q23.1094,248.375 23.75,248.5313 Q24.4063,248.6875 24.9688,248.9844 L24.9688,251.7031 Q24.3438,251.125 23.75,250.8594 Q23.1563,250.5781 22.5313,250.5781 Q21.1875,250.5781 20.5,251.6563 Q19.8125,252.7188 19.8125,254.8125 Q19.8125,256.9063 20.5,257.9844 Q21.1875,259.0469 22.5313,259.0469 Q23.1563,259.0469 23.75,258.7813 Q24.3438,258.5 24.9688,257.9219 L24.9688,260.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="36" y="259.8467">IntegerProblemInstanceCreation</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="261" y1="271" y2="271"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="13" y="287.9951">numberOfColors: int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="13" y="304.292">numberOfConfigurations: int</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="13" y="320.5889">carLineLength: int</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="261" y1="327.8906" y2="327.8906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="13" y="344.8857">Problem&lt;int, int&gt; createInstance()</text></g><!--MD5=[7e0cc054e68485d8dbab588155cf841a]
+class Solver--><g id="elem_Solver"><rect codeLine="30" fill="#F1F1F1" height="64.2969" id="Solver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="405" x="411" y="412"/><ellipse cx="560.25" cy="428" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M556.1719,423.7656 L556.1719,421.6094 L563.5625,421.6094 L563.5625,423.7656 L561.0938,423.7656 L561.0938,431.8438 L563.5625,431.8438 L563.5625,434 L556.1719,434 L556.1719,431.8438 L558.6406,431.8438 L558.6406,423.7656 L556.1719,423.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="43" x="580.75" y="432.8467">Solver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="766" y="409"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="767" y="421.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="412" x2="815" y1="444" y2="444"/><line style="stroke:#181818;stroke-width:0.5;" x1="412" x2="815" y1="452" y2="452"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="393" x="417" y="468.9951">Solution&lt;Col, Con&gt; solve(problem: Problem&lt;Col, Con&gt;)</text></g><!--MD5=[6aaaa47e4f47637c3ee3b476a37db9d9]
+class RandomSolver--><g id="elem_RandomSolver"><rect codeLine="37" fill="#F1F1F1" height="48" id="RandomSolver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="187" x="297" y="271.5"/><ellipse cx="312" cy="287.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M314.9688,293.1406 Q314.3906,293.4375 313.75,293.5781 Q313.1094,293.7344 312.4063,293.7344 Q309.9063,293.7344 308.5781,292.0938 Q307.2656,290.4375 307.2656,287.3125 Q307.2656,284.1875 308.5781,282.5313 Q309.9063,280.875 312.4063,280.875 Q313.1094,280.875 313.75,281.0313 Q314.4063,281.1875 314.9688,281.4844 L314.9688,284.2031 Q314.3438,283.625 313.75,283.3594 Q313.1563,283.0781 312.5313,283.0781 Q311.1875,283.0781 310.5,284.1563 Q309.8125,285.2188 309.8125,287.3125 Q309.8125,289.4063 310.5,290.4844 Q311.1875,291.5469 312.5313,291.5469 Q313.1563,291.5469 313.75,291.2813 Q314.3438,291 314.9688,290.4219 L314.9688,293.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="326" y="292.3467">RandomSolver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="434" y="268.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="435" y="280.6387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="298" x2="483" y1="303.5" y2="303.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="298" x2="483" y1="311.5" y2="311.5"/></g><!--MD5=[0a1d6197d08e02999d3c114adc924410]
+class TrackingSolver--><g id="elem_TrackingSolver"><rect codeLine="40" fill="#F1F1F1" height="64.2969" id="TrackingSolver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="189" x="519" y="263.5"/><ellipse cx="534" cy="279.5" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M534.1094,274.8438 L532.9531,279.9219 L535.2813,279.9219 L534.1094,274.8438 Z M532.625,272.6094 L535.6094,272.6094 L538.9688,285 L536.5156,285 L535.75,281.9375 L532.4688,281.9375 L531.7188,285 L529.2813,285 L532.625,272.6094 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="102" x="548" y="284.3467">TrackingSolver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="658" y="260.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="659" y="272.6387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="520" x2="707" y1="295.5" y2="295.5"/><polygon fill="none" points="530,301.5,534,305.5,530,309.5,526,305.5" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="539" y="312.4951">internal : Solver</text><line style="stroke:#181818;stroke-width:0.5;" x1="520" x2="707" y1="319.7969" y2="319.7969"/></g><!--MD5=[964e7e3fffb99e244bb1a947925bfd6e]
+class RuntimeTrackingSolver--><g id="elem_RuntimeTrackingSolver"><rect codeLine="47" fill="#F1F1F1" height="48" id="RuntimeTrackingSolver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="246" x="193.5" y="123"/><ellipse cx="208.5" cy="139" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M211.4688,144.6406 Q210.8906,144.9375 210.25,145.0781 Q209.6094,145.2344 208.9063,145.2344 Q206.4063,145.2344 205.0781,143.5938 Q203.7656,141.9375 203.7656,138.8125 Q203.7656,135.6875 205.0781,134.0313 Q206.4063,132.375 208.9063,132.375 Q209.6094,132.375 210.25,132.5313 Q210.9063,132.6875 211.4688,132.9844 L211.4688,135.7031 Q210.8438,135.125 210.25,134.8594 Q209.6563,134.5781 209.0313,134.5781 Q207.6875,134.5781 207,135.6563 Q206.3125,136.7188 206.3125,138.8125 Q206.3125,140.9063 207,141.9844 Q207.6875,143.0469 209.0313,143.0469 Q209.6563,143.0469 210.25,142.7813 Q210.8438,142.5 211.4688,141.9219 L211.4688,144.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="222.5" y="143.8467">RuntimeTrackingSolver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="389.5" y="120"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="390.5" y="132.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="194.5" x2="438.5" y1="155" y2="155"/><line style="stroke:#181818;stroke-width:0.5;" x1="194.5" x2="438.5" y1="163" y2="163"/></g><!--MD5=[25a6197c7c0d3dad1eaab61c39d6ba87]
+class ColorChangeTrackingSolver--><g id="elem_ColorChangeTrackingSolver"><rect codeLine="50" fill="#F1F1F1" height="64.2969" id="ColorChangeTrackingSolver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="278" x="474.5" y="115"/><ellipse cx="489.5" cy="131" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M492.4688,136.6406 Q491.8906,136.9375 491.25,137.0781 Q490.6094,137.2344 489.9063,137.2344 Q487.4063,137.2344 486.0781,135.5938 Q484.7656,133.9375 484.7656,130.8125 Q484.7656,127.6875 486.0781,126.0313 Q487.4063,124.375 489.9063,124.375 Q490.6094,124.375 491.25,124.5313 Q491.9063,124.6875 492.4688,124.9844 L492.4688,127.7031 Q491.8438,127.125 491.25,126.8594 Q490.6563,126.5781 490.0313,126.5781 Q488.6875,126.5781 488,127.6563 Q487.3125,128.7188 487.3125,130.8125 Q487.3125,132.9063 488,133.9844 Q488.6875,135.0469 490.0313,135.0469 Q490.6563,135.0469 491.25,134.7813 Q491.8438,134.5 492.4688,133.9219 L492.4688,136.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="191" x="503.5" y="135.8467">ColorChangeTrackingSolver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="702.5" y="112"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="703.5" y="124.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="475.5" x2="751.5" y1="147" y2="147"/><line style="stroke:#181818;stroke-width:0.5;" x1="475.5" x2="751.5" y1="155" y2="155"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="480.5" y="171.9951">int numberOfColorChanges()</text></g><!--MD5=[c1863ae7a83f0d4114d1dc5ffc6f27df]
+class Sampler--><g id="elem_Sampler"><rect codeLine="55" fill="#F1F1F1" height="64.2969" id="Sampler" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="446" x="787.5" y="115"/><ellipse cx="978.25" cy="131" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M974.1719,126.7656 L974.1719,124.6094 L981.5625,124.6094 L981.5625,126.7656 L979.0938,126.7656 L979.0938,134.8438 L981.5625,134.8438 L981.5625,137 L974.1719,137 L974.1719,134.8438 L976.6406,134.8438 L976.6406,126.7656 L974.1719,126.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="56" x="998.75" y="135.8467">Sampler</text><line style="stroke:#181818;stroke-width:0.5;" x1="788.5" x2="1232.5" y1="147" y2="147"/><line style="stroke:#181818;stroke-width:0.5;" x1="788.5" x2="1232.5" y1="155" y2="155"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="434" x="793.5" y="171.9951">dimod.SampleSet sample(model: dimod.BinaryQuadraticModel)</text></g><!--MD5=[81af53a4024af87d01483c25f27b2a17]
+class QuantumAnnealingSolver--><g id="elem_QuantumAnnealingSolver"><rect codeLine="59" fill="#F1F1F1" height="64.2969" id="QuantumAnnealingSolver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="261" x="812" y="263.5"/><ellipse cx="827" cy="279.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M829.9688,285.1406 Q829.3906,285.4375 828.75,285.5781 Q828.1094,285.7344 827.4063,285.7344 Q824.9063,285.7344 823.5781,284.0938 Q822.2656,282.4375 822.2656,279.3125 Q822.2656,276.1875 823.5781,274.5313 Q824.9063,272.875 827.4063,272.875 Q828.1094,272.875 828.75,273.0313 Q829.4063,273.1875 829.9688,273.4844 L829.9688,276.2031 Q829.3438,275.625 828.75,275.3594 Q828.1563,275.0781 827.5313,275.0781 Q826.1875,275.0781 825.5,276.1563 Q824.8125,277.2188 824.8125,279.3125 Q824.8125,281.4063 825.5,282.4844 Q826.1875,283.5469 827.5313,283.5469 Q828.1563,283.5469 828.75,283.2813 Q829.3438,283 829.9688,282.4219 L829.9688,285.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="841" y="284.3467">QuantumAnnealingSolver</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="1023" y="260.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="1024" y="272.6387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="813" x2="1072" y1="295.5" y2="295.5"/><polygon fill="none" points="823,301.5,827,305.5,823,309.5,819,305.5" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="832" y="312.4951">internal : Sampler</text><line style="stroke:#181818;stroke-width:0.5;" x1="813" x2="1072" y1="319.7969" y2="319.7969"/></g><!--MD5=[0e9cbe81d39abfb9c2dec111b48ee3ce]
+class DWaveSampler--><g id="elem_DWaveSampler"><rect fill="#F1F1F1" height="48" id="DWaveSampler" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="857.5" y="7"/><ellipse cx="872.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M875.4688,28.6406 Q874.8906,28.9375 874.25,29.0781 Q873.6094,29.2344 872.9063,29.2344 Q870.4063,29.2344 869.0781,27.5938 Q867.7656,25.9375 867.7656,22.8125 Q867.7656,19.6875 869.0781,18.0313 Q870.4063,16.375 872.9063,16.375 Q873.6094,16.375 874.25,16.5313 Q874.9063,16.6875 875.4688,16.9844 L875.4688,19.7031 Q874.8438,19.125 874.25,18.8594 Q873.6563,18.5781 873.0313,18.5781 Q871.6875,18.5781 871,19.6563 Q870.3125,20.7188 870.3125,22.8125 Q870.3125,24.9063 871,25.9844 Q871.6875,27.0469 873.0313,27.0469 Q873.6563,27.0469 874.25,26.7813 Q874.8438,26.5 875.4688,25.9219 L875.4688,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="886.5" y="27.8467">DWaveSampler</text><line style="stroke:#181818;stroke-width:0.5;" x1="858.5" x2="992.5" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="858.5" x2="992.5" y1="47" y2="47"/></g><!--MD5=[2bf4efcfe93169f178412786097dbbf9]
+class FujitsuSampler--><g id="elem_FujitsuSampler"><rect fill="#F1F1F1" height="48" id="FujitsuSampler" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133" x="1029" y="7"/><ellipse cx="1044" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1046.9688,28.6406 Q1046.3906,28.9375 1045.75,29.0781 Q1045.1094,29.2344 1044.4063,29.2344 Q1041.9063,29.2344 1040.5781,27.5938 Q1039.2656,25.9375 1039.2656,22.8125 Q1039.2656,19.6875 1040.5781,18.0313 Q1041.9063,16.375 1044.4063,16.375 Q1045.1094,16.375 1045.75,16.5313 Q1046.4063,16.6875 1046.9688,16.9844 L1046.9688,19.7031 Q1046.3438,19.125 1045.75,18.8594 Q1045.1563,18.5781 1044.5313,18.5781 Q1043.1875,18.5781 1042.5,19.6563 Q1041.8125,20.7188 1041.8125,22.8125 Q1041.8125,24.9063 1042.5,25.9844 Q1043.1875,27.0469 1044.5313,27.0469 Q1045.1563,27.0469 1045.75,26.7813 Q1046.3438,26.5 1046.9688,25.9219 L1046.9688,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="1058" y="27.8467">FujitsuSampler</text><line style="stroke:#181818;stroke-width:0.5;" x1="1030" x2="1161" y1="39" y2="39"/><line style="stroke:#181818;stroke-width:0.5;" x1="1030" x2="1161" y1="47" y2="47"/></g><!--MD5=[71e8807956d33805e77353b9d7e2df39]
+class Evaluation--><g id="elem_Evaluation"><rect codeLine="72" fill="#F1F1F1" height="64.2969" id="Evaluation" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="369" x="851" y="412"/><ellipse cx="968.25" cy="428" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M964.1719,423.7656 L964.1719,421.6094 L971.5625,421.6094 L971.5625,423.7656 L969.0938,423.7656 L969.0938,431.8438 L971.5625,431.8438 L971.5625,434 L964.1719,434 L964.1719,431.8438 L966.6406,431.8438 L966.6406,423.7656 L964.1719,423.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="71" x="988.75" y="432.8467">Evaluation</text><rect fill="#FFFFFF" height="15.9688" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="53" x="1170" y="409"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="1171" y="421.1387">Col, Con</text><line style="stroke:#181818;stroke-width:0.5;" x1="852" x2="1219" y1="444" y2="444"/><line style="stroke:#181818;stroke-width:0.5;" x1="852" x2="1219" y1="452" y2="452"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="357" x="857" y="468.9951">void evaluate(solutions: List&lt;Solution&lt;Col, Con&gt;&gt;)</text></g><!--MD5=[3f102054f6072ef7ea6e4ba4fcc72410]
+link ProblemInstanceCreation to Problem--><g id="link_ProblemInstanceCreation_Problem"><path codeLine="18" d="M227.95,476.07 C248.9,492.57 275.35,513.41 300,532.82 " fill="none" id="ProblemInstanceCreation-to-Problem" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="303.94,535.93,299.3526,527.2148,300.0149,532.8327,294.3969,533.495,303.94,535.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1781674e60d6eb10ea3841de5332b319]
+link IntegerProblemInstanceCreation to ProblemInstanceCreation--><g id="link_IntegerProblemInstanceCreation_ProblemInstanceCreation"><path codeLine="28" d="M155.07,352.3 C160.02,365.73 165.27,379.98 170.11,393.12 " fill="none" id="IntegerProblemInstanceCreation-to-ProblemInstanceCreation" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="176.7,390.75,177.05,411.94,163.57,395.59,176.7,390.75" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[2e860e13565bd446a099d8d48aea6777]
+link Solver to Problem--><g id="link_Solver_Problem"><path codeLine="34" d="M562.81,476.07 C535.67,492.71 501.34,513.75 469.44,533.3 " fill="none" id="Solver-to-Problem" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="465.16,535.93,474.9225,534.6289,469.4207,533.3135,470.7361,527.8117,465.16,535.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ea12cb4c744cca408f593232a340eab9]
+link Solver to Solution--><g id="link_Solver_Solution"><path codeLine="35" d="M675,476.07 C708.07,492.78 749.94,513.92 788.77,533.54 " fill="none" id="Solver-to-Solution" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="793.49,535.93,787.2485,528.3114,789.0236,533.6825,783.6525,535.4576,793.49,535.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fe795478a0a63fb009a7bb032ae076a9]
+link RandomSolver to Solver--><g id="link_RandomSolver_Solver"><path codeLine="38" d="M425.84,319.71 C458.97,341.48 509.28,374.54 549.48,400.94 " fill="none" id="RandomSolver-to-Solver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="553.42,395.15,566.29,411.98,545.73,406.85,553.42,395.15" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[feafb0a50ab3beab66e261c918aed1c7]
+link TrackingSolver to Solver--><g id="link_TrackingSolver_Solver"><path codeLine="44" d="M602.85,327.57 C600.75,346.22 600.22,370.39 601.28,391.8 " fill="none" id="TrackingSolver-to-Solver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="608.28,391.49,602.86,411.98,594.32,392.58,608.28,391.49" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[feafb0a50ab3beab66e261c918aed1c7]
+link TrackingSolver to Solver--><g id="link_TrackingSolver_Solver"><path codeLine="45" d="M624.77,327.57 C627.25,348.25 627.66,375.75 626.01,398.71 " fill="none" id="TrackingSolver-to-Solver-1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="624.77,411.98,629.313,406.3799,625.8909,400.0325,621.3479,405.6326,624.77,411.98" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9613c661f8157a3736ad7177586a5722]
+link RuntimeTrackingSolver to TrackingSolver--><g id="link_RuntimeTrackingSolver_TrackingSolver"><path codeLine="48" d="M363.66,171.15 C401.06,189.52 454.64,215.87 501.5,239 C511.66,244.02 522.33,249.29 532.89,254.52 " fill="none" id="RuntimeTrackingSolver-to-TrackingSolver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="536.2,248.35,551.02,263.5,529.99,260.89,536.2,248.35" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[432b85e1b1e7829fd12dbcb90430e75f]
+link ColorChangeTrackingSolver to TrackingSolver--><g id="link_ColorChangeTrackingSolver_TrackingSolver"><path codeLine="53" d="M613.5,179.07 C613.5,197.72 613.5,221.89 613.5,243.3 " fill="none" id="ColorChangeTrackingSolver-to-TrackingSolver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="620.5,243.48,613.5,263.48,606.5,243.48,620.5,243.48" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4059d83cd04fec74d2c583de06aa19db]
+link QuantumAnnealingSolver to Solver--><g id="link_QuantumAnnealingSolver_Solver"><path codeLine="66" d="M872.73,327.57 C822.78,349.81 755.17,379.92 701.52,403.81 " fill="none" id="QuantumAnnealingSolver-to-Solver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="704.29,410.23,683.17,411.98,698.59,397.45,704.29,410.23" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[92a9401ff3a6347999a64a3b3c9a36af]
+link Sampler to QuantumAnnealingSolver--><g id="link_Sampler_QuantumAnnealingSolver"><path codeLine="67" d="M996.08,179.07 C986.3,200.14 973.24,228.28 962.46,251.5 " fill="none" id="Sampler-to-QuantumAnnealingSolver" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="956.9,263.48,963.0546,259.7222,961.9529,252.5957,955.7984,256.3535,956.9,263.48" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8f19f0d740f9182cd573a3bc6c98ed7a]
+link DWaveSampler to Sampler--><g id="link_DWaveSampler_Sampler"><path codeLine="69" d="M942.7,55.07 C952.01,67.55 963.85,83.44 975.04,98.44 " fill="none" id="DWaveSampler-to-Sampler" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="980.86,94.54,987.2,114.75,969.64,102.91,980.86,94.54" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ed85c31eed4e8717fbd524c35adb2d36]
+link FujitsuSampler to Sampler--><g id="link_FujitsuSampler_Sampler"><path codeLine="70" d="M1078.3,55.07 C1068.99,67.55 1057.15,83.44 1045.96,98.44 " fill="none" id="FujitsuSampler-to-Sampler" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1051.36,102.91,1033.8,114.75,1040.14,94.54,1051.36,102.91" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7f1341b2fbb6644dcf7651712f8f9d5d]
+link Evaluation to Solution--><g id="link_Evaluation_Solution"><path codeLine="75" d="M1007.51,476.07 C992.82,492.37 974.32,512.9 957.02,532.1 " fill="none" id="Evaluation-to-Solution" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="953.57,535.93,962.5639,531.9162,956.9148,532.2135,956.6175,526.5645,953.57,535.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[929ad13f915f59d42c09d9913ca46c4e]
+@startuml
+class Problem<Col, Con> {
+    colors : Set<Col>
+    configurations : Set<Con>
+    number_of_configuration_color_combinations: Dict<(Con, Col), int>
+    carLine : List<Con>
+}
+
+class Solution<Col, Con> {
+    problem : Problem<Col, Con>
+    assignments : List<Col>
+    algorithm : String
+    gathered_data : Dict<String, Any>
+}
+
+interface ProblemInstanceCreation<Col, Con> {
+    Problem<Col, Con> createInstance()
+}
+ProblemInstanceCreation - -> Problem
+
+class IntegerProblemInstanceCreation {
+    numberOfColors: int
+    numberOfConfigurations: int
+    carLineLength: int
+
+    Problem<int, int> createInstance()
+}
+
+IntegerProblemInstanceCreation - -|> ProblemInstanceCreation
+
+interface Solver<Col, Con> {
+     Solution<Col, Con> solve(problem: Problem<Col, Con>)
+}
+
+Solver - -> Problem
+Solver - -> Solution
+
+class RandomSolver<Col, Con>
+RandomSolver - -|> Solver
+
+abstract TrackingSolver<Col, Con> {
+    # internal : Solver
+}
+
+TrackingSolver - -|> Solver
+TrackingSolver - -o Solver
+
+class RuntimeTrackingSolver<Col, Con>
+RuntimeTrackingSolver - -|> TrackingSolver
+
+class ColorChangeTrackingSolver<Col, Con> {
+    int numberOfColorChanges()
+}
+ColorChangeTrackingSolver - -|> TrackingSolver
+
+interface Sampler {
+    dimod.SampleSet sample(model: dimod.BinaryQuadraticModel)
+}
+
+class QuantumAnnealingSolver<Col, Con> {
+    # internal : Sampler
+
+    ' # dimod.BinaryQuadraticModel encode(problem: Problem<Col, Con>)
+    ' # Solution<Col, Con> decode(problem: dimod.SampleSet)
+}
+
+QuantumAnnealingSolver - -|> Solver
+Sampler - -o QuantumAnnealingSolver
+
+DWaveSampler - -|> Sampler
+FujitsuSampler - -|> Sampler
+
+interface Evaluation<Col, Con> {
+    void evaluate(solutions: List<Solution<Col, Con>>)
+}
+Evaluation - -> Solution
+
+@enduml
+
+@startuml
+class Problem<Col, Con> {
+    colors : Set<Col>
+    configurations : Set<Con>
+    number_of_configuration_color_combinations: Dict<(Con, Col), int>
+    carLine : List<Con>
+}
+
+class Solution<Col, Con> {
+    problem : Problem<Col, Con>
+    assignments : List<Col>
+    algorithm : String
+    gathered_data : Dict<String, Any>
+}
+
+interface ProblemInstanceCreation<Col, Con> {
+    Problem<Col, Con> createInstance()
+}
+ProblemInstanceCreation - -> Problem
+
+class IntegerProblemInstanceCreation {
+    numberOfColors: int
+    numberOfConfigurations: int
+    carLineLength: int
+
+    Problem<int, int> createInstance()
+}
+
+IntegerProblemInstanceCreation - -|> ProblemInstanceCreation
+
+interface Solver<Col, Con> {
+     Solution<Col, Con> solve(problem: Problem<Col, Con>)
+}
+
+Solver - -> Problem
+Solver - -> Solution
+
+class RandomSolver<Col, Con>
+RandomSolver - -|> Solver
+
+abstract TrackingSolver<Col, Con> {
+    # internal : Solver
+}
+
+TrackingSolver - -|> Solver
+TrackingSolver - -o Solver
+
+class RuntimeTrackingSolver<Col, Con>
+RuntimeTrackingSolver - -|> TrackingSolver
+
+class ColorChangeTrackingSolver<Col, Con> {
+    int numberOfColorChanges()
+}
+ColorChangeTrackingSolver - -|> TrackingSolver
+
+interface Sampler {
+    dimod.SampleSet sample(model: dimod.BinaryQuadraticModel)
+}
+
+class QuantumAnnealingSolver<Col, Con> {
+    # internal : Sampler
+
+}
+
+QuantumAnnealingSolver - -|> Solver
+Sampler - -o QuantumAnnealingSolver
+
+DWaveSampler - -|> Sampler
+FujitsuSampler - -|> Sampler
+
+interface Evaluation<Col, Con> {
+    void evaluate(solutions: List<Solution<Col, Con>>)
+}
+Evaluation - -> Solution
+
+@enduml
+
+PlantUML version 1.2022.5(Sat Apr 30 12:55:52 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: de
+Country: DE
+--></g></svg>

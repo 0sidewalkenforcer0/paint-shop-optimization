@@ -1,0 +1,45 @@
+@startuml
+class Solution
+class Problem
+
+class Directory {
+    directory: Path
+
+    Iterable<String> fetchProblemNames()
+    Iterable<(String, Problem)> fetchProblems()
+    void storeProblems(problems: Iterable[(String, Problem)], replace: bool)
+
+    Iterable<(String, Solution)> fetchSolutions()
+    void storeSolutions(solutions: Iterable[(String, Solution)], replace: bool)
+}
+Directory --> Problem
+Directory --> Solution
+
+interface Naming {
+    Set<String> newNames(names: Iterable<String>)
+}
+
+class IntegerNaming {}
+IntegerNaming --|> Naming
+
+class SourceNaming {
+    prefix: String
+    internal: Naming
+}
+SourceNaming --|> Naming
+
+class Creation
+Creation --> Directory
+Creation --> Naming
+
+class Solving
+Solving --> Directory
+Solving --> Naming
+
+class Evaluation
+Evaluation --> Directory
+
+note top of Creation: Argparse
+note top of Solving: Argparse
+note top of Evaluation: Argparse
+@enduml
