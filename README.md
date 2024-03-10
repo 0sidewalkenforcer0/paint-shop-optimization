@@ -1,92 +1,109 @@
-# Paint Shop Optimization
+# Multi Car Multi Color Paintshop Optimization
 
+The Multi Car Multi Color Paintshop Problem (MCMCPSP) describes the problem, to assign colors to a production car line such, that the number of color changes is minimal.
 
+The scope of this python project is to...
+- [create](#creation) such problems
+- [solve](#solving) these problems by using classical, as well as quantum computing algorithms 
+- [evaluate](#evaluation) the solutions by plotting the results into graphs
 
-## Getting started
+## Poetry
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+This project uses [Poetry](https://python-poetry.org) as dependency management and packaging tool.
+The installation procedure is described [here](https://python-poetry.org/docs/master/#installing-with-the-official-installer)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+With poetry it is possible to run the project with all its dependencies in a virtual environment, independent from the packages and versions installed on the main system. 
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Once Poetry is installed, you can use the following commands:
+```
+poetry install
+```
+will install all dependencies for the first time and create a poetry.lock file
+```
+poetry update
+```
+will update all packages
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.lrz.de/mobile-ifi/qcp/22ss/vw/paint-shop-optimization.git
-git branch -M main
-git push -uf origin main
+poetry shell
+```
+will switch to the virtual environment 
+
+Further information about poetry and how to use it can be also found in its [documentation](https://python-poetry.org/docs/master/)
+
+## Creation
+```
+python creation.py -f [COLORS] -k [CONFIGURATIONS] -l [LINE_LENGTH] -t [PROBLEM_SETS] -d [DATA_DIRECTORY]
 ```
 
-## Integrate with your tools
+This part creates a number of problem sets, where the first three arguments specify the structure of the problem
+- f number of available colors for each configuration (car)
+- k number of available configurations (different car types)
+- l length of the production car line
 
-- [ ] [Set up project integrations](https://gitlab.lrz.de/mobile-ifi/qcp/22ss/vw/paint-shop-optimization/-/settings/integrations)
+The information about how many problem sets to create and where to store them is specified by the remaining two arguments
+- t number of problem sets
+- d path to the data directory
 
-## Collaborate with your team
+Example:
+```
+python creation.py -f 3 -k 5 -l 20 -t 4 -d data
+```
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+will create 4 different problem sets, each consisting of a car line with the length of 20 randomly assigned configurations.
+Each of the 5 available configurations gets a random subset of the 3 possible colors assigned and is represented at least once in the car line. 
+Each color is assigned at least to one configuration.
 
-## Test and Deploy
+Those problems are then stored as json files into the folder ./data/problems/ 
 
-Use the built-in continuous integration in GitLab.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Solving
+```
+python solving.py -a [ALGORITHMS] -d [DATA_DIRECTORY]
+```
 
-***
+This part solves each problem with each given algorithm and stores the solutions to the data directory, both specified by the arguments 
+- a list of solving algorithms
+- d path to the data directory
 
-# Editing this README
+Currently there are 5 algorithms available:
+- random Assigns each configuration an available color randomly
+- greedy Will assign one color to each configuration as long as possible and then switch to the next available color
+- qbsolv Simulates quantum annealing to find an optimal assignment of colors
+- dwave Uses the D-Wave quantum annealing computer to find an optimal assignment of colors
+- fujitsu Uses the Fujitsu quantum annealing computer to find an optimal assignment of colors
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Each algorithm will assign colors in such way, that every hard constraint will hold.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Example:
+```
+python solving.py -a random greedy qbsolv dwave fujitsu -d data
+```
 
-## Name
-Choose a self-explaining name for your project.
+will retrieve all problems from ./data/problems/ and solve each problem with every given algorithm.
+The solutions will be stored in ./data/solutions/
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Since every problem is solved with each algorithm, the number of solution files is n-times the number of problem files, where n is the number of algorithms.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## Evaluation
+```
+python evaluation.py -p [PLOT_TYPE] -d [DATA_DIRECTORY] -o [FILE]
+```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+This part retrieves all solutions from the data directory and plots the result to one file, specified by the arguments
+- p plot type to use for the evaluation
+- d path to the data directory
+- o filename for the graph
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+Currently there are 4 plot types available:
+- best Comparision of the results grouped by algorithm sorted by the number of color changes
+- boxplot Comparision of the results grouped by algorithm 
+- lineplot Percentual comparision of the algorithms to the random assignment
+- scatterplot Energy plot for each solution
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Example:
+```
+python evaluation.py -p lineplot -d data -o line.png
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+will retrieve all solutions from ./data/solutions/, plot the results in a lineplot, and store that plot into ./line.png
